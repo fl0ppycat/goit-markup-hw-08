@@ -1,0 +1,17 @@
+.advantages-section {
+    @extend .section;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 0;
+    }
+}
+
+.advantages-section__flex-wrapper {
+    @media screen and (min-width: 768px) {
+        @include flex(row, start, flex-start);
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+}
+
+

@@ -1,0 +1,150 @@
+.menu-container{
+    display: none;
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+
+    background-color: var(--white);
+
+    &.is-open {
+        @media screen and (max-width: 767px) {
+            display: block;
+            position: fixed;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            z-index: 9;
+            padding: 48px 40px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+            display: block;
+            position: relative;
+
+            height: 100%;
+            
+            @include flex(row, space-between, center);           
+    }
+}
+
+.menu-container__inner-wrapper {
+    @media screen and (min-width: 768px) {
+        @include flex(row, space-between, center);
+    }    
+}
+
+.menu-container.is-open .menu-container__inner-wrapper {
+    height: 100%;
+
+    display: flex;
+    flex-direction:  column;
+
+    .header-nav{
+        margin-left: 0;
+        margin-bottom: 306px;
+        
+        font-size: 40px;
+        line-height: 1.18;
+        text-align: left;
+    }
+
+    .header-nav__item:not(:last-of-type) {
+        margin-bottom: 32px;
+    }
+
+    .header-contacts{
+        justify-items: flex-end;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .header-contacts__item{
+        & .header-contacts__icon{
+            display: none;
+        }
+    }
+
+    .header-contacts__item:last-of-type{
+        font-size: 34px;
+        line-height: 40px;
+        color: var(--brand-blue);
+
+        margin-bottom: 32px;
+    }
+
+    .header-contacts__item:first-of-type{
+        font-size: 24px;
+        line-height: 28px;
+        color: var(--light-gray);
+
+    }
+
+    .header-social-media {
+        display: inline-block;
+        margin-top: auto;
+
+        font-size: 18px;
+        line-height: 1.22;
+
+        color: var(--light-gray);
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+        }
+
+        & .link{
+            color: var(--brand-blue);
+        }
+    }
+
+    .current:after{
+        display: none;
+    }
+}
+
+.menu-toggle{
+    position: absolute;
+
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus{
+        cursor: pointer;
+        fill: var(--brand-blue);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-toggle__open {
+    top: 6px;
+    right: 15px;
+}
+
+.menu-toggle__close{
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle__open-icon {
+    width: 24px;
+    height: 16px;
+}
+
+.menu-toggle__close-icon{
+    width: 19px;
+    height: 19px;
+}
+
+
+ 

@@ -1,0 +1,17 @@
+.current {
+    position: relative;
+}
+
+.current:after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 50px;
+    border: 2px solid var(--brand-blue);
+    background-color: var(--brand-blue);
+}

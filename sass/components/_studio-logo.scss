@@ -1,0 +1,23 @@
+.studio-logo {
+    margin-top: 0;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+
+    color: var(--brand-blue);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {  
+        font-size: 24px;
+    }
+}
+
+.studio-logo__second-part--black {
+    color: var(--brand-black);
+}
+
+.studio-logo__second-part--white {
+    color: var(--white);
+}

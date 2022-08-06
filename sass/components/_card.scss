@@ -1,0 +1,34 @@
+.card {
+    font-style: normal;
+
+    background: var(--white);
+
+    &:hover .img-caption-over {
+            transform: translateY(-294px);
+    }
+}
+
+.card__img-thumb {
+
+}
+
+.card__img {
+
+}
+
+.card__img-caption-over {
+
+}
+
+.card__text {
+
+}
+
+.card__title {
+
+}
+
+.card__caption {
+
+}
+
