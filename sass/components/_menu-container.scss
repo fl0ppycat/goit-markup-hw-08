@@ -19,7 +19,6 @@
             bottom: 0;
 
             z-index: 9;
-            padding: 48px 40px;
         }
     }
 
@@ -41,14 +40,11 @@
 
 .menu-container.is-open .menu-container__inner-wrapper {
     height: 100%;
-
-    display: flex;
-    flex-direction:  column;
+    padding: 48px 40px;
 
     .header-nav{
         margin-left: 0;
-        margin-bottom: 306px;
-        
+          
         font-size: 40px;
         line-height: 1.18;
         text-align: left;
@@ -59,7 +55,8 @@
     }
 
     .header-contacts{
-        justify-items: flex-end;
+        position: absolute;
+        bottom: 200px;
 
         display: flex;
         flex-direction: column-reverse;
@@ -87,8 +84,10 @@
     }
 
     .header-social-media {
+        position: absolute;
+        bottom: 48px;
         display: inline-block;
-        margin-top: auto;
+        margin-top: 64px;
 
         font-size: 18px;
         line-height: 1.22;
@@ -145,6 +144,3 @@
     width: 19px;
     height: 19px;
 }
-
-
- 
