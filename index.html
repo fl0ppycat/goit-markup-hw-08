@@ -149,7 +149,9 @@
               <div class="our-work-item__img-thumb">
                 <img
                   class="our-work-item__img"
-                  src="./images/img-section-what-we-do-1.jpg"
+                  srcset="./images/desktop-apps.jpg 1x, ./images/desktop-apps@2x.jpg 2x"
+                  src="./images/desktop-apps.jpg"
+                  width="370"
                   alt="Программист в процессе работы над кодом"
                 />
                 <div class="our-work-item__img-caption-over">
@@ -161,7 +163,9 @@
               <div class="our-work-item__img-thumb">
                 <img
                   class="our-work-item__img"
-                  src="./images/img-section-what-we-do-2.jpg"
+                  srcset="./images/mobile-apps.jpg 1x, ./images/mobile-apps@2x.jpg 2x"
+                  src="./images/mobile-apps.jpg"
+                  width="370"
                   alt="Дизайнер создает интерфейс мобильного приложения"
                 />
                 <div class="our-work-item__img-caption-over">
@@ -173,7 +177,9 @@
               <div class="our-work-item__img-thumb">
                 <img
                   class="our-work-item__img"
-                  src="./images/img-section-what-we-do-3.jpg"
+                  srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x"
+                  src="./images/design.jpg"
+                  width="370"
                   alt="Дизайнер работает с цветовой палитрой"
                 />
                 <div class="our-work-item__img-caption-over">
@@ -191,12 +197,75 @@
 
           <ul class="cards-set">
             <li class="team-member-card">
-              <img
-                class="team-member-card__img"
-                src="./images/img-our-team-1.jpg"
-                alt="фото: Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-ihor.webp    1x,
+                    ./images/desktop-ihor@2x.webp 2x,
+                    ./images/desktop-ihor@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-ihor.jpg    1x,
+                    ./images/desktop-ihor@2x.jpg 2x,
+                    ./images/desktop-ihor@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
 
+                <source
+                  srcset="
+                    ./images/tablet-ihor.webp    1x,
+                    ./images/tablet-ihor@2x.webp 2x,
+                    ./images/tablet-ihor@3x.webp 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-ihor.jpg    1x,
+                    ./images/tablet-ihor@2x.jpg 2x,
+                    ./images/tablet-ihor@3x.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-ihor.webp    1x,
+                    ./images/mobile-ihor@2x.webp 2x,
+                    ./images/mobile-ihor@3x.webp 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-ihor.jpg    1x,
+                    ./images/mobile-ihor@2x.jpg 2x,
+                    ./images/mobile-ihor@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  srcset="
+                    ./images/mobile-ihor.jpg     450w,
+                    ./images/mobile-ihor@2x.jpg  900w,
+                    ./images/mobile-ihor@3x.jpg 1350w
+                  "
+                  sizes="50vw"
+                  src="./images/mobile-ihor.jpg"
+                  alt="Игорь Демьяненко"
+                />
+              </picture>
               <div class="team-member-card__text">
                 <p class="team-member-card__title">Игорь Демьяненко</p>
                 <span class="team-member-card__caption">Product Designer</span>
@@ -235,11 +304,75 @@
             </li>
 
             <li class="team-member-card">
-              <img
-                class="team-member-card__img"
-                src="./images/img-our-team-2.jpg"
-                alt="фото: Ольга Репина"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-olha.webp    1x,
+                    ./images/desktop-olha@2x.webp 2x,
+                    ./images/desktop-olha@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-olha.jpg    1x,
+                    ./images/desktop-olha@2x.jpg 2x,
+                    ./images/desktop-olha@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet-olha.webp    1x,
+                    ./images/tablet-olha@2x.webp 2x,
+                    ./images/tablet-olha@3x.webp 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-olha.jpg    1x,
+                    ./images/tablet-olha@2x.jpg 2x,
+                    ./images/tablet-olha@3x.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-olha.webp    1x,
+                    ./images/mobile-olha@2x.webp 2x,
+                    ./images/mobile-olha@3x.webp 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-olha.jpg    1x,
+                    ./images/mobile-olha@2x.jpg 2x,
+                    ./images/mobile-olha@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  srcset="
+                    ./images/mobile-olha.jpg     450w,
+                    ./images/mobile-olha@2x.jpg  900w,
+                    ./images/mobile-olha@3x.jpg 1350w
+                  "
+                  sizes="50vw"
+                  src="./images/mobile-olha.jpg"
+                  alt="Ольга Репина"
+                />
+              </picture>
               <div class="team-member-card__text">
                 <p class="team-member-card__title">Ольга Репина</p>
                 <span class="team-member-card__caption">Frontend Developer</span>
@@ -277,11 +410,75 @@
             </li>
 
             <li class="team-member-card">
-              <img
-                class="team-member-card__img"
-                src="./images/img-our-team-3.jpg"
-                alt="фото: Николай Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-nick.webp    1x,
+                    ./images/desktop-nick@2x.webp 2x,
+                    ./images/desktop-nick@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-nick.jpg    1x,
+                    ./images/desktop-nick@2x.jpg 2x,
+                    ./images/desktop-nick@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet-nick.webp    1x,
+                    ./images/tablet-nick@2x.webp 2x,
+                    ./images/tablet-nick@3x.webp 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-nick.jpg    1x,
+                    ./images/tablet-nick@2x.jpg 2x,
+                    ./images/tablet-nick@3x.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-nick.webp    1x,
+                    ./images/mobile-nick@2x.webp 2x,
+                    ./images/mobile-nick@3x.webp 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-nick.jpg    1x,
+                    ./images/mobile-nick@2x.jpg 2x,
+                    ./images/mobile-nick@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  srcset="
+                    ./images/mobile-nick.jpg     450w,
+                    ./images/mobile-nick@2x.jpg  900w,
+                    ./images/mobile-nick@3x.jpg 1350w
+                  "
+                  sizes="50vw"
+                  src="./images/mobile-nick.jpg"
+                  alt="Николай Тарасов"
+                />
+              </picture>
               <div class="team-member-card__text">
                 <p class="team-member-card__title">Николай Тарасов</p>
                 <span class="team-member-card__caption">Marketing</span>
@@ -319,11 +516,75 @@
             </li>
 
             <li class="team-member-card">
-              <img
-                class="team-member-card__img"
-                src="./images/img-our-team-4.jpg"
-                alt="фото: Михаил Ермаков"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop-michael.webp    1x,
+                    ./images/desktop-michael@2x.webp 2x,
+                    ./images/desktop-michael@3x.webp 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop-michael.jpg    1x,
+                    ./images/desktop-michael@2x.jpg 2x,
+                    ./images/desktop-michael@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet-michael.webp    1x,
+                    ./images/tablet-michael@2x.webp 2x,
+                    ./images/tablet-michael@3x.webp 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet-michael.jpg    1x,
+                    ./images/tablet-michael@2x.jpg 2x,
+                    ./images/tablet-michael@3x.jpg 3x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile-michael.webp    1x,
+                    ./images/mobile-michael@2x.webp 2x,
+                    ./images/mobile-michael@3x.webp 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile-michael.jpg    1x,
+                    ./images/mobile-michael@2x.jpg 2x,
+                    ./images/mobile-michael@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  srcset="
+                    ./images/mobile-michael.jpg     450w,
+                    ./images/mobile-michael@2x.jpg  900w,
+                    ./images/mobile-michael@3x.jpg 1350w
+                  "
+                  sizes="50vw"
+                  src="./images/mobile-michael.jpg"
+                  alt="Михаил Ермаков"
+                />
+              </picture>
               <div class="team-member-card__text">
                 <p class="team-member-card__title">Михаил Ермаков</p>
                 <span class="team-member-card__caption">UI Designer</span>

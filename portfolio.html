@@ -25,44 +25,56 @@
         </button>
 
         <div class="menu-container js-menu-container" id="menu-container" data-menu>
-          <button class="menu-toggle menu-toggle__close js-close-menu">
-            <svg class="icon menu-toggle__close-icon">
-              <use href="./images/icons.svg#icon-close-menu"></use>
-            </svg>
-          </button>
+          <div class="menu-container__inner-wrapper">
+            <button class="menu-toggle menu-toggle__close js-close-menu">
+              <svg class="icon menu-toggle__close-icon">
+                <use href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+            </button>
 
-          <nav>
-            <ul class="header__submenu header-nav">
-              <li class="header-nav__item">
-                <a class="link" href="./index.html">Студия</a>
+            <nav>
+              <ul class="header__submenu header-nav">
+                <li class="header-nav__item">
+                  <a class="link current" href="./index.html">Студия</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="link" href="#footer">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="header__submenu header-contacts">
+              <li class="header-contacts__item">
+                <a class="link" href="mailto:info@devstudio.com">
+                  <svg class="icon header-contacts__icon">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
               </li>
-              <li class="header-nav__item">
-                <a class="link current" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="header-nav__item">
-                <a class="link" href="#footer">Контакты</a>
+              <li class="header-contacts__item">
+                <a class="link" href="tel:+380961111111">
+                  <svg class="icon header-contacts__icon">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
               </li>
             </ul>
-          </nav>
 
-          <ul class="header__submenu header-contacts">
-            <li class="header-contacts__item">
-              <a class="link" href="mailto:info@devstudio.com">
-                <svg class="icon header-contacts__icon">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="header-contacts__item">
-              <a class="link" href="tel:+380961111111">
-                <svg class="icon header-contacts__icon">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
+            <div class="header__submenu header-social-media">
+              <a class="link" href="#">Instagram</a>
+              |
+              <a class="link" href="#">Twitter</a>
+              |
+              <a class="link" href="#">Facebook</a>
+              |
+              <a class="link" href="#">LinkedIn</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -83,7 +95,67 @@
           <ul class="list cards-set">
             <li class="product-card">
                   <div class="product-card__img-thumb">
-                    <img class="product-card__img" src="./images/img-portfolio-1.jpg" alt="Открытый на ноутбуке сайт" />
+                    <picture class="product-card__img">
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio1.webp    1x,
+                          ./images/desktop-portfolio1@2x.webp 2x,
+                          ./images/desktop-portfolio1@3x.webp 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio1.jpg    1x,
+                          ./images/desktop-portfolio1@2x.jpg 2x,
+                          ./images/desktop-portfolio1@3x.jpg 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/tablet-portfolio1.webp    1x,
+                          ./images/tablet-portfolio1@2x.webp 2x,
+                          ./images/tablet-portfolio1@3x.webp 3x
+                        "
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/tablet-portfolio1.jpg 1x, ./images/tablet-portfolio1@2x.jpg 2x, ./images/tablet-portfolio1@3x.jpg 3x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/mobile-portfolio1.webp    1x,
+                          ./images/mobile-portfolio1@2x.webp 2x,
+                          ./images/mobile-portfolio1@3x.webp 3x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/mobile-portfolio1.jpg 1x, ./images/mobile-portfolio1@2x.jpg 2x, ./images/mobile-portfolio1@3x.jpg 3x"
+                        media="(max-width: 767px)"
+                        type="image/jpeg"
+                      />
+
+                      <img
+                        srcset="
+                          ./images/mobile-portfolio1.jpg     450w,
+                          ./images/mobile-portfolio1@2x.jpg  900w,
+                          ./images/mobile-portfolio1@3x.jpg 1350w
+                        "
+                        sizes="50vw"
+                        src="./images/mobile-portfolio1.jpg"
+                        alt="Открытый на ноутбуке сайт"
+                      />
+                    </picture>
                     <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                   </div>    
                   <div class="product-card__text">
@@ -93,7 +165,67 @@
 
             <li class="product-card">
                   <div class="product-card__img-thumb">
-                    <img class="product-card__img" src="./images/img-portfolio-2.jpg" alt="Постер: игра в баскетбол" />
+                    <picture class="product-card__img">
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio2.webp    1x,
+                          ./images/desktop-portfolio2@2x.webp 2x,
+                          ./images/desktop-portfolio2@3x.webp 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio2.jpg    1x,
+                          ./images/desktop-portfolio2@2x.jpg 2x,
+                          ./images/desktop-portfolio2@3x.jpg 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/tablet-portfolio2.webp    1x,
+                          ./images/tablet-portfolio2@2x.webp 2x,
+                          ./images/tablet-portfolio2@3x.webp 3x
+                        "
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/tablet-portfolio2.jpg 1x, ./images/tablet-portfolio2@2x.jpg 2x, ./images/tablet-portfolio2@3x.jpg 3x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/mobile-portfolio2.webp    1x,
+                          ./images/mobile-portfolio2@2x.webp 2x,
+                          ./images/mobile-portfolio2@3x.webp 3x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/mobile-portfolio2.jpg 1x, ./images/mobile-portfolio2@2x.jpg 2x, ./images/mobile-portfolio2@3x.jpg 3x"
+                        media="(max-width: 767px)"
+                        type="image/jpeg"
+                      />
+
+                      <img
+                        srcset="
+                          ./images/mobile-portfolio2.jpg     450w,
+                          ./images/mobile-portfolio2@2x.jpg  900w,
+                          ./images/mobile-portfolio2@3x.jpg 1350w
+                        "
+                        sizes="50vw"
+                        src="./images/mobile-portfolio2.jpg"
+                        alt="Постер: игра в баскетбол"
+                      />
+                    </picture>
                     <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                   </div>
                   <div class="product-card__text">
@@ -103,7 +235,67 @@
 
             <li class="product-card">
                   <div class="product-card__img-thumb">
-                    <img class="product-card__img" src="./images/img-portfolio-3.jpg" alt="Логотип ресторана Seafood" />
+                    <picture class="product-card__img">
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio3.webp    1x,
+                          ./images/desktop-portfolio3@2x.webp 2x,
+                          ./images/desktop-portfolio3@3x.webp 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/desktop-portfolio3.jpg    1x,
+                          ./images/desktop-portfolio3@2x.jpg 2x,
+                          ./images/desktop-portfolio3@3x.jpg 3x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/tablet-portfolio3.webp    1x,
+                          ./images/tablet-portfolio3@2x.webp 2x,
+                          ./images/tablet-portfolio3@3x.webp 3x
+                        "
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/tablet-portfolio3.jpg 1x, ./images/tablet-portfolio3@2x.jpg 2x, ./images/tablet-portfolio3@3x.jpg 3x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpeg"
+                      />
+
+                      <source
+                        srcset="
+                          ./images/mobile-portfolio3.webp    1x,
+                          ./images/mobile-portfolio3@2x.webp 2x,
+                          ./images/mobile-portfolio3@3x.webp 3x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./images/mobile-portfolio3.jpg 1x, ./images/mobile-portfolio3@2x.jpg 2x, ./images/mobile-portfolio3@3x.jpg 3x"
+                        media="(max-width: 767px)"
+                        type="image/jpeg"
+                      />
+
+                      <img
+                        srcset="
+                          ./images/mobile-portfolio3.jpg     450w,
+                          ./images/mobile-portfolio3@2x.jpg  900w,
+                          ./images/mobile-portfolio3@3x.jpg 1350w
+                        "
+                        sizes="50vw"
+                        src="./images/mobile-portfolio3.jpg"
+                        alt="Логотип ресторана Seafood"
+                      />
+                    </picture>
                     <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                   </div>
                   <div class="product-card__text">
@@ -113,7 +305,67 @@
 
             <li class="product-card">
                 <div class="product-card__img-thumb">
-                  <img class="product-card__img" src="./images/img-portfolio-4.jpg" alt="Наушники" />
+                  <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio4.webp    1x,
+												./images/desktop-portfolio4@2x.webp 2x,
+												./images/desktop-portfolio4@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio4.jpg    1x,
+												./images/desktop-portfolio4@2x.jpg 2x,
+												./images/desktop-portfolio4@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio4.webp    1x,
+												./images/tablet-portfolio4@2x.webp 2x,
+												./images/tablet-portfolio4@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio4.jpg 1x, ./images/tablet-portfolio4@2x.jpg 2x, ./images/tablet-portfolio4@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio4.webp    1x,
+												./images/mobile-portfolio4@2x.webp 2x,
+												./images/mobile-portfolio4@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio4.jpg 1x, ./images/mobile-portfolio4@2x.jpg 2x, ./images/mobile-portfolio4@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio4.jpg     450w,
+												./images/mobile-portfolio4@2x.jpg  900w,
+												./images/mobile-portfolio4@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio4.jpg"
+											alt="Наушники"
+										/>
+									</picture>	
                   <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                 </div>    
                 <div class="product-card__text">
@@ -123,7 +375,67 @@
 
             <li class="product-card">
                 <div class="product-card__img-thumb">
-                  <img class="product-card__img" src="./images/img-portfolio-5.jpg" alt="Две коробки разных размеров" />
+                  <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio5.webp    1x,
+												./images/desktop-portfolio5@2x.webp 2x,
+												./images/desktop-portfolio5@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio5.jpg    1x,
+												./images/desktop-portfolio5@2x.jpg 2x,
+												./images/desktop-portfolio5@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio5.webp    1x,
+												./images/tablet-portfolio5@2x.webp 2x,
+												./images/tablet-portfolio5@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio5.jpg 1x, ./images/tablet-portfolio5@2x.jpg 2x, ./images/tablet-portfolio5@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio5.webp    1x,
+												./images/mobile-portfolio5@2x.webp 2x,
+												./images/mobile-portfolio5@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio5.jpg 1x, ./images/mobile-portfolio5@2x.jpg 2x, ./images/mobile-portfolio5@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio5.jpg     450w,
+												./images/mobile-portfolio5@2x.jpg  900w,
+												./images/mobile-portfolio5@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio5.jpg"
+											alt="Две коробки разных размеров"
+										/>
+									</picture>
                   <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                 </div>    
                 <div class="product-card__text">
@@ -133,10 +445,67 @@
 
           <li class="product-card">
                 <div class="product-card__img-thumb">
-                  <img
-                    class="product-card__img" src="./images/img-portfolio-6.jpg"
-                    alt="Сайт Inspiration has no borders на мониторе"
-                  />
+                  <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio6.webp    1x,
+												./images/desktop-portfolio6@2x.webp 2x,
+												./images/desktop-portfolio6@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio6.jpg    1x,
+												./images/desktop-portfolio6@2x.jpg 2x,
+												./images/desktop-portfolio6@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio6.webp    1x,
+												./images/tablet-portfolio6@2x.webp 2x,
+												./images/tablet-portfolio6@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio6.jpg 1x, ./images/tablet-portfolio6@2x.jpg 2x, ./images/tablet-portfolio6@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio6.webp    1x,
+												./images/mobile-portfolio6@2x.webp 2x,
+												./images/mobile-portfolio6@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio6.jpg 1x, ./images/mobile-portfolio6@2x.jpg 2x, ./images/mobile-portfolio6@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio6.jpg     450w,
+												./images/mobile-portfolio6@2x.jpg  900w,
+												./images/mobile-portfolio6@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio6.jpg"
+											alt="Сайт Inspiration has no borders на мониторе"
+										/>
+									</picture>
                   <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                 </div>
                 <div class="product-card__text">
@@ -146,7 +515,67 @@
 
           <li class="product-card">
                 <div class="product-card__img-thumb">
-                  <img class="product-card__img" src="./images/img-portfolio-7.jpg" alt="Разворот печатного издания" />
+                    <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio7.webp    1x,
+												./images/desktop-portfolio7@2x.webp 2x,
+												./images/desktop-portfolio7@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio7.jpg    1x,
+												./images/desktop-portfolio7@2x.jpg 2x,
+												./images/desktop-portfolio7@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio7.webp    1x,
+												./images/tablet-portfolio7@2x.webp 2x,
+												./images/tablet-portfolio7@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio7.jpg 1x, ./images/tablet-portfolio7@2x.jpg 2x, ./images/tablet-portfolio7@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio7.webp    1x,
+												./images/mobile-portfolio7@2x.webp 2x,
+												./images/mobile-portfolio7@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio7.jpg 1x, ./images/mobile-portfolio7@2x.jpg 2x, ./images/mobile-portfolio7@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio7.jpg     450w,
+												./images/mobile-portfolio7@2x.jpg  900w,
+												./images/mobile-portfolio7@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio7.jpg"
+											alt="Разворот печатного издания"
+										/>
+									</picture>
                   <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                 </div>    
                 <div class="product-card__text">
@@ -156,10 +585,67 @@
 
           <li class="product-card">
               <div class="product-card__img-thumb">
-                <img
-                  class="product-card__img" src="./images/img-portfolio-8.jpg"
-                  alt="Картонная бирка с декоративной веревкой"
-                />
+                  <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio8.webp    1x,
+												./images/desktop-portfolio8@2x.webp 2x,
+												./images/desktop-portfolio8@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio8.jpg    1x,
+												./images/desktop-portfolio8@2x.jpg 2x,
+												./images/desktop-portfolio8@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio8.webp    1x,
+												./images/tablet-portfolio8@2x.webp 2x,
+												./images/tablet-portfolio8@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio8.jpg 1x, ./images/tablet-portfolio8@2x.jpg 2x, ./images/tablet-portfolio8@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio8.webp    1x,
+												./images/mobile-portfolio8@2x.webp 2x,
+												./images/mobile-portfolio8@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio8.jpg 1x, ./images/mobile-portfolio8@2x.jpg 2x, ./images/mobile-portfolio8@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio8.jpg     450w,
+												./images/mobile-portfolio8@2x.jpg  900w,
+												./images/mobile-portfolio8@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio8.jpg"
+											alt="Картонная бирка с декоративной веревкой"
+										/>
+									</picture>
                 <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
               </div>  
               <div class="product-card__text">
@@ -169,10 +655,67 @@
 
           <li class="product-card">
                 <div class="product-card__img-thumb">
-                  <img
-                      class="product-card__img" src="./images/img-portfolio-9.jpg"
-                    alt="Приложение Growing Business, открытое на ноутбуке"
-                  />
+                    <picture class="product-card__img">
+										<source
+											srcset="
+												./images/desktop-portfolio9.webp    1x,
+												./images/desktop-portfolio9@2x.webp 2x,
+												./images/desktop-portfolio9@3x.webp 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/desktop-portfolio9.jpg    1x,
+												./images/desktop-portfolio9@2x.jpg 2x,
+												./images/desktop-portfolio9@3x.jpg 3x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/tablet-portfolio9.webp    1x,
+												./images/tablet-portfolio9@2x.webp 2x,
+												./images/tablet-portfolio9@3x.webp 3x
+											"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/tablet-portfolio9.jpg 1x, ./images/tablet-portfolio9@2x.jpg 2x, ./images/tablet-portfolio9@3x.jpg 3x"
+											media="(min-width: 768px) and (max-width: 1199px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images/mobile-portfolio9.webp    1x,
+												./images/mobile-portfolio9@2x.webp 2x,
+												./images/mobile-portfolio9@3x.webp 3x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="./images/mobile-portfolio9.jpg 1x, ./images/mobile-portfolio9@2x.jpg 2x, ./images/mobile-portfolio9@3x.jpg 3x"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											srcset="
+												./images/mobile-portfolio9.jpg     450w,
+												./images/mobile-portfolio9@2x.jpg  900w,
+												./images/mobile-portfolio9@3x.jpg 1350w
+											"
+											sizes="50vw"
+											src="./images/mobile-portfolio9.jpg"
+											alt="Приложение Growing Business, открытое на ноутбуке"
+										/>
+									</picture>
                   <div class="product-card__img-caption-over">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</div>
                 </div> 
                 <div class="product-card__text">
